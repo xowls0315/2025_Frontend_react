@@ -1,5 +1,15 @@
+import GreenCircle from "./GreenCircle";
+import RedCircle from "./RedCircle";
+import YellowCircle from "./YellowCircle";
+
 function App() {
-  return <>리액트 시작 !!!!</>;
+  return (
+    <>
+      <RedCircle />
+      <YellowCircle />
+      <GreenCircle />
+    </>
+  );
 }
 
 export default App;
