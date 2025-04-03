@@ -1,12 +1,6 @@
-import { useState } from "react";
-import Basket from "./Basket";
-
-function App() {
-  const [num, setNum] = useState(1);
-
-  return (
-    <>
-      <Basket
+import Item from "./Item";
+{
+  /*<Basket
         num={num}
         increase={() => {
           setNum(num + 1);
@@ -17,8 +11,16 @@ function App() {
           }
         }}
         price={27800}
-      />
-    </>
+      />*/
+}
+function App() {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+      <Item itemPrice={55600} itemSize={"small"} />
+      <Item itemPrice={20000} itemSize={"medium"} />
+      <Item itemPrice={35000} itemSize={"large"} />
+      <Item itemPrice={41000} itemSize={"xlarge"} />
+    </div>
   );
 }
 

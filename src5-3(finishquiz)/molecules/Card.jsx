@@ -1,13 +1,11 @@
-import Dent from "../atom/Dent";
-import Exchange from "../atom/Exchange";
-import Gold from "../atom/Gold";
+import Type from "../atom/Type";
 
 const Card = () => {
   return (
     <div style={{ display: "flex" }}>
-      <Dent text="덴트" />
-      <Gold text="판금" />
-      <Exchange text="교환" />
+      <Type text="덴트" />
+      <Type text="판금" />
+      <Type text="교환" />
     </div>
   );
 };

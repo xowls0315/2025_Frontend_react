@@ -1,16 +1,24 @@
 import Clock from "../atom/Clock";
-import State from "../atom/State";
+import Status from "../atom/Status";
 import Address from "../atom/Address";
 import Option from "../atom/Option";
 
 const Card = (props) => {
+  const cardObj = {
+    confirmed: "#F5FDEB",
+    completed: "#F2F4F6",
+    need: "#FFF5F6",
+  };
+
   const cardStyle = {
-    width: "320px",
+    width: "350px",
+    height: "160px",
     display: "flex",
     flexDirection: "column",
-    backgroundColor: "ivory",
+    gap: "12px",
     padding: "20px",
     borderRadius: "20px",
+    backgroundColor: cardObj[props.status],
   };
 
   return (
@@ -22,11 +30,15 @@ const Card = (props) => {
           marginBottom: "25px",
         }}
       >
-        <Clock clock="오전 10:00" />
-        <State />
+        <Clock clock={props.clock} />
+        <Status status={props.status} />
       </div>
-      <Address address="서울특별시 서초구 양재동 헌릉로 12 현대 기아자동차빌딩" />
-      <Option option="비대면" />
+      <Address address={props.address} />
+      <div style={{ display: "flex", gap: "10px" }}>
+        {props.options.map((v) => (
+          <Option status={props.status} contents={v} />
+        ))}
+      </div>
     </div>
   );
 };
