@@ -12,15 +12,24 @@ function App() {
 
   const click = (x, y) => {
     setCarStatuses((prev) => {
-      // const newPrev = prev;
-      // newPrev[x][y] = !newPrev[x][y];
-      // return newPrev;
+      return prev.map((row, rowIndex) => {
+        if (rowIndex !== x) return row;
 
-      const newPrev = [...prev].map((v) => {
-        ksdfngkldfndfglk;
+        // 토글: 이미 선택된 버튼이면 전체 false로
+        if (row[y]) {
+          return row.map(() => false);
+        }
+
+        // 새로운 선택: 해당 버튼만 true
+        return row.map((_, colIndex) => colIndex === y);
       });
     });
   };
+
+  // 각 row에서 하나씩만 true인지를 확인
+  const isAllSelected = carStatuses.every((row) =>
+    row.some((status) => status)
+  );
 
   return (
     <div
@@ -48,7 +57,7 @@ function App() {
         clicked={click}
         row={2}
       />
-      <LinkButton />
+      <LinkButton isActive={isAllSelected} />
     </div>
   );
 }
