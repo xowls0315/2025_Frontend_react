@@ -1,0 +1,10 @@
+.layout {
+  width: 100%;
+  padding: 30px 0;
+  margin-bottom: 30px;
+  border-radius: 0px 0px 50px 50px;
+
+  background-color: #a9c4e2;
+  /* bg는 Calendar.jsx안에 함수로 나타내주는게 좋음! */
+  text-align: center;
+}

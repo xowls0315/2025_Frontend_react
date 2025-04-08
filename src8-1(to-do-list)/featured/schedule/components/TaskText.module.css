@@ -1,0 +1,9 @@
+.clear {
+  font-size: 18px;
+  text-decoration: line-through;
+  color: gray;
+  transition: all 0.5s;
+}
+.unclear {
+  font-size: 18px;
+}
