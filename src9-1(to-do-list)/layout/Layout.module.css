@@ -1,0 +1,13 @@
+/* 배경색 #efebe8 */
+.application {
+  height: 100vh;
+  background-color: #efebe8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todolist {
+  width: 40%;
+  height: 70%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
