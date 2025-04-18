@@ -1,0 +1,16 @@
+.title {
+  display: flex;
+  flex-direction: column;
+}
+.title__text {
+  font-size: 45px;
+  font-weight: bold;
+}
+.title__text > span {
+  color: cadetblue;
+}
+.title__time {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px 0px;
+}
