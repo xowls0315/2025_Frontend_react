@@ -1,4 +1,5 @@
 import "./TodoList.css";
+import Button from "@mui/material/Button";
 
 const TodoList = (props) => {
   return (
@@ -8,7 +9,9 @@ const TodoList = (props) => {
       {props.todos.map((todo, index) => (
         <div key={index} className="todolist__task">
           {todo}
-          <button onClick={() => props.onComplete(index)}>완료</button>
+          <Button variant="contained" onClick={() => props.onComplete(index)}>
+            완료
+          </Button>
         </div>
       ))}
     </div>

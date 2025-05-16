@@ -1,4 +1,5 @@
 import "./CompleteList.css";
+import Button from "@mui/material/Button";
 
 const CompleteList = (props) => {
   return (
@@ -8,7 +9,13 @@ const CompleteList = (props) => {
       {props.completedTodos.map((todo, index) => (
         <div key={index} className="completelist__task">
           {todo}
-          <button onClick={() => props.onDelete(index)}>삭제</button>
+          <Button
+            variant="outlined"
+            color="error"
+            onClick={() => props.onDelete(index)}
+          >
+            삭제
+          </Button>
         </div>
       ))}
     </div>

@@ -30,16 +30,15 @@ const TodoInput = (props) => {
           onChange={(e) => setInputValue(e.target.value)}
         />
       </Stack>
-      <Stack direction="row" spacing={2}>
-        <Button
-          className="input__btn"
-          variant="contained"
-          color="success"
-          onClick={handleAdd}
-        >
-          +
-        </Button>
-      </Stack>
+      <Button
+        className="input__btn"
+        variant="contained"
+        color="success"
+        onClick={handleAdd}
+        style={{ fontWeight: "bold", fontSize: "20px" }}
+      >
+        리스트에 추가
+      </Button>
     </div>
   );
 };
